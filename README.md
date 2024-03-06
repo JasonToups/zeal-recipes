@@ -16,7 +16,7 @@ To bring up locally run:
 
 This will start the backend, run webpack, and handle request proxying for the front end.
 
-Navigate to [localhost:3000](http://localhost:3000) to see the frontend running!
+The start script will open [localhost:3000](http://localhost:3000) in your default browser to see the frontend running!
 
 ## working on the frontend
 
@@ -40,3 +40,7 @@ head to the `RUN` tab (the play button w/ a bug) and select `debug` and hit play
 1. containerize the application
 1. add deployments using heroku, digital ocean, etc...
 1. add integration tests using puppeteer, webdriver, playwright, etc...
+
+## Deployment
+
+This app is _deployed_ to **Heroku** here: [Zeal Recipes](https://zeal-recipies-400979edd631.herokuapp.com/)
