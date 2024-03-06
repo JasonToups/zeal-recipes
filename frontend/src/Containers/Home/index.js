@@ -109,7 +109,8 @@ class Home extends Component {
     this.setState({ ingredients })
   }
   handleRecipeClick(event, id) {
-    // TODO: use the id to make the recipe api call
+    // Use the fetchRecipe action to fetch the recipe
+    this.props.fetchRecipe(id)
   }
 
   render() {
@@ -181,6 +182,7 @@ const mapDispatchToProps = (dispatch) =>
   bindActionCreators(
     {
       searchRecipes: actions.searchRecipes,
+      fetchRecipe: actions.fetchRecipe,
     },
     dispatch
   )
