@@ -2963,6 +2963,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@material-ui/lab@npm:^4.0.0-alpha.61":
+  version: 4.0.0-alpha.61
+  resolution: "@material-ui/lab@npm:4.0.0-alpha.61"
+  dependencies:
+    "@babel/runtime": "npm:^7.4.4"
+    "@material-ui/utils": "npm:^4.11.3"
+    clsx: "npm:^1.0.4"
+    prop-types: "npm:^15.7.2"
+    react-is: "npm:^16.8.0 || ^17.0.0"
+  peerDependencies:
+    "@material-ui/core": ^4.12.1
+    "@types/react": ^16.8.6 || ^17.0.0
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: f1c05cec33908c9e3c1c5c89e27f8e8cc747c26028b701a87d6c20e0fd9df7ac7632897f370311fc2b54aed3834903243ffdf303b5d74c4d42a646a6784cca5d
+  languageName: node
+  linkType: hard
+
 "@material-ui/styles@npm:^4.11.4":
   version: 4.11.5
   resolution: "@material-ui/styles@npm:4.11.5"
@@ -3697,6 +3718,7 @@ __metadata:
     "@babel/preset-env": "npm:7.23.6"
     "@babel/preset-react": "npm:7.14.5"
     "@material-ui/core": "npm:4.11.4"
+    "@material-ui/lab": "npm:^4.0.0-alpha.61"
     babel-loader: "npm:8.2.2"
     esbuild: "npm:0.12.18"
     esbuild-loader: "npm:2.13.1"
