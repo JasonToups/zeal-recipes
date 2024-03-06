@@ -45,6 +45,10 @@ class Home extends Component {
     }
     this.setState({ ingredients })
   }
+  handleRecipeClick(event, id) {
+    // TODO: use the id to make the recipe api call
+  }
+
   render() {
     const { term, ingredients } = this.state
     const { recipes, isLoading } = this.props
@@ -77,7 +81,11 @@ class Home extends Component {
         {recipes && (
           <List>
             {recipes.map((recipe) => (
-              <ListItem key={recipe.id}>
+              <ListItem
+                key={recipe.id}
+                button
+                onClick={(event) => this.handleRecipeClick(event, recipe.id)}
+              >
                 <ListItemText primary={recipe.name} />
               </ListItem>
             ))}

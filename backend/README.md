@@ -1,5 +1,7 @@
 # backend
 
+The back end is being hosted on http://localhost:4000/
+
 ## intro
 
 hello, and welcome to the backend portion of the take home. please make sure to read carefully!

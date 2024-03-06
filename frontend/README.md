@@ -1,5 +1,7 @@
 # frontend
 
+The back end is being hosted on http://localhost:3000/
+
 ## intro
 
 welcome to the frontend portion of the take home. feel free to edit any part of the code base you feel you need to!
