@@ -3,6 +3,8 @@ import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
 import { HomeWrapper } from "./styles"
 import Input from "@material-ui/core/Input"
+import TextField from "@material-ui/core/TextField"
+import Autocomplete from "@material-ui/lab/Autocomplete"
 import Checkbox from "@material-ui/core/Checkbox"
 import FormControlLabel from "@material-ui/core/FormControlLabel"
 import Divider from "@material-ui/core/Divider"
@@ -77,7 +79,8 @@ class Home extends Component {
     this.fetchSearch = this.fetchSearch.bind(this)
     this.state = {
       term: "",
-      ingredients: ["milk"],
+      ingredients: ["flour", "sugar", "salt", "milk"],
+      inputValue: "",
     }
   }
   fetchSearch() {
@@ -88,6 +91,12 @@ class Home extends Component {
   handleSearch(event) {
     const term = event.target.value
     this.setState({ term })
+  }
+  handleTermChange = (event, newValue) => {
+    this.setState({ term: newValue })
+  }
+  handleInputValueChange = (event, newValue) => {
+    this.setState({ inputValue: newValue })
   }
   handleIngredient(ingredient, event) {
     const { ingredients } = { ...this.state }
@@ -104,15 +113,21 @@ class Home extends Component {
   }
 
   render() {
-    const { term, ingredients } = this.state
+    const { term, ingredients, inputValue } = this.state
     const { recipes, isLoading } = this.props
     return (
       <HomeWrapper>
-        <Input
-          autoFocus={true}
-          fullWidth={true}
-          onChange={this.handleSearch}
+        <Autocomplete
           value={term}
+          onChange={this.handleTermChange}
+          inputValue={inputValue}
+          onInputChange={this.handleInputValueChange}
+          options={recipeNames}
+          getOptionLabel={(option) => option}
+          getOptionSelected={(option, value) => option === value}
+          renderInput={(params) => (
+            <TextField {...params} label="Recipe Names" variant="outlined" />
+          )}
         />
         <div>
           <h3>Ingredients on hand</h3>
