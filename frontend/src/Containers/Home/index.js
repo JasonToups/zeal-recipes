@@ -172,9 +172,13 @@ class Home extends Component {
         <h2>recipe</h2>
         {recipe && (
           <div>
-            <p>{recipe}</p>
             <h3>{recipe.name}</h3>
-            <p>{recipe.description}</p>
+            <p>{recipe.instructions}</p>
+            {recipe.ingredients.map((ingredient) => (
+              <p key={ingredient.id}>
+                {ingredient.name} - {ingredient.amount} {ingredient.unit}
+              </p>
+            ))}
           </div>
         )}
         {isLoadingRecipe && <LinearProgress />}
@@ -189,8 +193,8 @@ class Home extends Component {
 }
 
 const mapStateToProps = (state) => {
-  const { search } = state
-  return { ...search }
+  const { search, recipe } = state
+  return { ...search, ...recipe }
 }
 
 const mapDispatchToProps = (dispatch) =>
