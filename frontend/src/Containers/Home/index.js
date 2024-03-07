@@ -14,6 +14,7 @@ import List from "@material-ui/core/List"
 import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
 import * as actions from "../../actions"
+import Recipe from "../Recipe"
 
 const ingredientList = ["flour", "sugar", "salt", "butter", "milk"]
 const recipeNames = [
@@ -82,8 +83,8 @@ class Home extends Component {
     this.state = {
       term: "",
       ingredients: ["flour", "sugar", "salt", "milk"],
-      recipe: "",
       inputValue: "",
+      recipe: "",
     }
   }
   fetchSearch() {
@@ -168,17 +169,7 @@ class Home extends Component {
         {isLoading && <LinearProgress />}
         <Divider />
         <h2>recipe</h2>
-        {recipe && (
-          <div>
-            <h3>{recipe.name}</h3>
-            <p>{recipe.instructions}</p>
-            {recipe.ingredients.map((ingredient) => (
-              <p key={ingredient.id}>
-                {ingredient.name} - {ingredient.amount} {ingredient.unit}
-              </p>
-            ))}
-          </div>
-        )}
+        {recipe && <Recipe />}
         {isLoadingRecipe && <LinearProgress />}
         {/*
           TODO: Add a recipe component here.
