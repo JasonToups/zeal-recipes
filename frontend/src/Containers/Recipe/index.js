@@ -3,13 +3,15 @@ import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
 import LinearProgress from "@material-ui/core/LinearProgress"
 import * as actions from "../../actions"
+import { RecipeWrapper } from "./styles"
 
 class Recipe extends React.Component {
   render() {
     const { recipe, isLoadingRecipe } = this.props // Get the recipe data from props
 
     return (
-      <div>
+      <RecipeWrapper>
+        <h2>Recipe</h2>
         {recipe && (
           <div key={recipe.id}>
             <h3>{recipe.name}</h3>
@@ -22,7 +24,7 @@ class Recipe extends React.Component {
           </div>
         )}
         {isLoadingRecipe && <LinearProgress />}
-      </div>
+      </RecipeWrapper>
     )
   }
 }
