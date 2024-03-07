@@ -1,4 +1,4 @@
-import { Request, Response, NextFunction } from "express"
+import { Request, Response } from "express"
 import { RecipeModel } from "../models"
 
 export const recipeMiddleware = async (

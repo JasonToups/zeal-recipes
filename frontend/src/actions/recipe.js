@@ -7,7 +7,6 @@ const fetchRecipeRequest = () => ({
 })
 
 const fetchRecipeSuccess = (payload) => {
-  console.log("fetchRecipeSuccess: ", payload)
   return {
     type: FETCH_RECIPE_SUCCESS,
     payload,
@@ -32,7 +31,6 @@ export const executeRecipeFetch = async (id) => {
 
 export const fetchRecipe = (id) => {
   return async (dispatch) => {
-    console.log("fetchRecipe: ", id)
     dispatch(fetchRecipeRequest())
     try {
       const response = await executeRecipeFetch(id)
