@@ -6,11 +6,9 @@ export const FETCH_RECIPE_REQUEST = "FETCH_RECIPE_REQUEST"
 export const FETCH_RECIPE_SUCCESS = "FETCH_RECIPE_SUCCESS"
 export const FETCH_RECIPE_FAILURE = "FETCH_RECIPE_FAILURE"
 
-const fetchRecipeRequest = () => {
-  return {
-    type: FETCH_RECIPE_REQUEST,
-  }
-}
+const fetchRecipeRequest = () => ({
+  type: FETCH_RECIPE_REQUEST,
+})
 
 const fetchRecipeSuccess = (payload) => {
   console.log("fetchRecipeSuccess: ", payload)
@@ -20,12 +18,10 @@ const fetchRecipeSuccess = (payload) => {
   }
 }
 
-const fetchRecipeFailure = (error) => {
-  return {
-    type: FETCH_RECIPE_FAILURE,
-    payload: error,
-  }
-}
+const fetchRecipeFailure = (error) => ({
+  type: FETCH_RECIPE_FAILURE,
+  payload: error,
+})
 
 export const fetchRecipe = (id) => {
   return async (dispatch) => {
