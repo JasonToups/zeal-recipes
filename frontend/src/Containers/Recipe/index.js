@@ -4,7 +4,6 @@ import { bindActionCreators } from "redux"
 import LinearProgress from "@material-ui/core/LinearProgress"
 import * as actions from "../../actions"
 
-// TODO Create a connected component to render a fetched recipe
 class Recipe extends React.Component {
   render() {
     const { recipe, isLoadingRecipe } = this.props // Get the recipe data from props
