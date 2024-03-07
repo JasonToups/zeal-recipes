@@ -10,6 +10,6 @@ welcome to the frontend portion of the take home. feel free to edit any part of 
 
 ## TODO
 
-- [ ] fix the search function
-- [ ] add a recipe component to display the response
+- [x] fix the search function
+- [x] add a recipe component to display the response
 - [ ] add routing so that you can land on a recipe page or reload and have the same search
