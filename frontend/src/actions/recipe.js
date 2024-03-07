@@ -12,11 +12,11 @@ const fetchRecipeRequest = () => {
   }
 }
 
-const fetchRecipeSuccess = (recipe) => {
-  console.log("fetchRecipeSuccess: ", recipe)
+const fetchRecipeSuccess = (payload) => {
+  console.log("fetchRecipeSuccess: ", payload)
   return {
     type: FETCH_RECIPE_SUCCESS,
-    payload: recipe,
+    payload,
   }
 }
 
