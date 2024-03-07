@@ -23,19 +23,26 @@ const fetchRecipeFailure = (error) => ({
   payload: error,
 })
 
+export const executeRecipeFetch = async (id) => {
+  const response = await fetch(`/api/recipe/${id}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+  const recipe = await response.json()
+  return recipe
+}
+
 export const fetchRecipe = (id) => {
   return async (dispatch) => {
     console.log("fetchRecipe: ", id)
     dispatch(fetchRecipeRequest())
     try {
-      const response = await fetch(`/api/recipe/${id}`)
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      const recipe = await response.json()
-      dispatch(fetchRecipeSuccess(recipe))
+      const response = await executeRecipeFetch(id)
+      dispatch(fetchRecipeSuccess(response))
     } catch (error) {
-      dispatch(fetchRecipeFailure(error.toString()))
+      dispatch(fetchRecipeFailure(error))
     }
   }
 }
