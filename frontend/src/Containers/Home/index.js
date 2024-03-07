@@ -113,8 +113,6 @@ class Home extends Component {
   }
   fetchRecipe(event, id) {
     // Use the fetchRecipe action to fetch the recipe
-    // TODO this should be an await and then the response should be saved as the recipe in state
-
     this.props.fetchRecipe(id)
   }
 

@@ -4,8 +4,6 @@ import { RecipeModel } from "../models"
 export const recipeMiddleware = async (
   req: Request,
   res: Response
-  // TODO: Do we need next?
-  // next: NextFunction
 ): Promise<void> => {
   const { id } = req.params
   const recipe = await RecipeModel.findById(id)
