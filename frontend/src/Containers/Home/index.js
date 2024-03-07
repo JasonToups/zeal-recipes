@@ -123,20 +123,8 @@ class Home extends Component {
     const { recipe, isLoadingRecipe } = this.props
     return (
       <HomeWrapper>
-        <Autocomplete
-          value={term}
-          onChange={this.handleTermChange}
-          inputValue={inputValue}
-          onInputChange={this.handleInputValueChange}
-          options={recipeNames}
-          getOptionLabel={(option) => option}
-          getOptionSelected={(option, value) => option === value}
-          renderInput={(params) => (
-            <TextField {...params} label="Recipe Names" variant="outlined" />
-          )}
-        />
         <div>
-          <h3>Ingredients on hand</h3>
+          <h3>Ingredients in Pantry</h3>
           {ingredientList.map((ingredient) => (
             <FormControlLabel
               key={ingredient}
@@ -151,6 +139,18 @@ class Home extends Component {
             />
           ))}
         </div>
+        <Autocomplete
+          value={term}
+          onChange={this.handleTermChange}
+          inputValue={inputValue}
+          onInputChange={this.handleInputValueChange}
+          options={recipeNames}
+          getOptionLabel={(option) => option}
+          getOptionSelected={(option, value) => option === value}
+          renderInput={(params) => (
+            <TextField {...params} label="Recipe Names" variant="outlined" />
+          )}
+        />
         <Button onClick={this.fetchSearch}>search</Button>
         <Divider />
         {recipes && (
@@ -168,7 +168,6 @@ class Home extends Component {
         )}
         {isLoading && <LinearProgress />}
         <Divider />
-        <h2>Recipe</h2>
         {recipe && <Recipe />}
         {isLoadingRecipe && <LinearProgress />}
       </HomeWrapper>
