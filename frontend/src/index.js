@@ -5,6 +5,7 @@ import thunkMiddleware from "redux-thunk"
 import { createStore, applyMiddleware, compose } from "redux"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./Containers/Home"
+import Recipe from "./Containers/Recipe"
 import reducers from "./reducers"
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
@@ -20,6 +21,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/recipe/:id" element={<Recipe />} />
       </Routes>
     </Router>
   </Provider>
