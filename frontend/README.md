@@ -1,6 +1,6 @@
 # frontend
 
-The back end is being hosted on http://localhost:3000/
+The front end is being hosted on http://localhost:3000/
 
 ## intro
 
@@ -10,6 +10,6 @@ welcome to the frontend portion of the take home. feel free to edit any part of 
 
 ## TODO
 
-1. fix the search function
-1. add a recipe component to display the response
-1. add routing so that you can land on a recipe page or reload and have the same search
+- [ ] fix the search function
+- [ ] add a recipe component to display the response
+- [ ] add routing so that you can land on a recipe page or reload and have the same search
