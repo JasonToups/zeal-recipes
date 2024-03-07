@@ -1,7 +1,3 @@
-/* TODO: create recipe fetch actions, creators, and constants
-  API: use /api/recipe/:id as a get request to fetch the recipe info
-*/
-
 export const FETCH_RECIPE_REQUEST = "FETCH_RECIPE_REQUEST"
 export const FETCH_RECIPE_SUCCESS = "FETCH_RECIPE_SUCCESS"
 export const FETCH_RECIPE_FAILURE = "FETCH_RECIPE_FAILURE"
