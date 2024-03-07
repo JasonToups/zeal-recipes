@@ -78,9 +78,11 @@ class Home extends Component {
     this.handleSearch = this.handleSearch.bind(this)
     this.handleIngredient = this.handleIngredient.bind(this)
     this.fetchSearch = this.fetchSearch.bind(this)
+    this.fetchRecipe = this.fetchRecipe.bind(this)
     this.state = {
       term: "",
       ingredients: ["flour", "sugar", "salt", "milk"],
+      recipe: "",
       inputValue: "",
     }
   }
@@ -109,14 +111,17 @@ class Home extends Component {
     }
     this.setState({ ingredients })
   }
-  handleRecipeClick(event, id) {
+  fetchRecipe(event, id) {
     // Use the fetchRecipe action to fetch the recipe
+    // TODO this should be an await and then the response should be saved as the recipe in state
+
     this.props.fetchRecipe(id)
   }
 
   render() {
     const { term, ingredients, inputValue } = this.state
     const { recipes, isLoading } = this.props
+    const { recipe, isLoadingRecipe } = this.props
     return (
       <HomeWrapper>
         <Autocomplete
@@ -155,7 +160,7 @@ class Home extends Component {
               <ListItem
                 key={recipe.id}
                 button
-                onClick={(event) => this.handleRecipeClick(event, recipe.id)}
+                onClick={(event) => this.fetchRecipe(event, recipe.id)}
               >
                 <ListItemText primary={recipe.name} />
               </ListItem>
@@ -164,6 +169,15 @@ class Home extends Component {
         )}
         {isLoading && <LinearProgress />}
         <Divider />
+        <h2>recipe</h2>
+        {recipe && (
+          <div>
+            <p>{recipe}</p>
+            <h3>{recipe.name}</h3>
+            <p>{recipe.description}</p>
+          </div>
+        )}
+        {isLoadingRecipe && <LinearProgress />}
         {/*
           TODO: Add a recipe component here.
           I'm expecting you to have it return null or a component based on the redux state, not passing any props from here
