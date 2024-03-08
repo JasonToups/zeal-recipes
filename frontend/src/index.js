@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./Containers/Home"
 import Recipe from "./Containers/Recipe"
 import reducers from "./reducers"
+import { GlobalStyle } from "./styles/global"
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 const store = createStore(
@@ -18,6 +19,7 @@ const container = document.getElementById("home")
 const root = createRoot(container)
 root.render(
   <Provider store={store}>
+    <GlobalStyle />
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
