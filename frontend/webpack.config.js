@@ -56,7 +56,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "what can you make",
+      title: "The Joy of Recipes",
       template: buildTemplate,
     }),
     new webpack.HotModuleReplacementPlugin(),
