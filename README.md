@@ -1,4 +1,6 @@
-# What Can You Make
+# The Joy of Recipes
+
+A Fullstack React & Express App that dynamically generates recipes, using the styled-components package.
 
 ## Installation
 
