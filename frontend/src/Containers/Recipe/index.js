@@ -15,12 +15,12 @@ class Recipe extends React.Component {
         {recipe && (
           <div key={recipe.id}>
             <h3>{recipe.name}</h3>
-            <p>{recipe.instructions}</p>
             {recipe.ingredients.map((ingredient, index) => (
               <p key={ingredient.key || index}>
                 {ingredient.name} - {ingredient.amount} {ingredient.unit}
               </p>
             ))}
+            <p>{recipe.instructions}</p>
           </div>
         )}
         {isLoadingRecipe && <LinearProgress />}
