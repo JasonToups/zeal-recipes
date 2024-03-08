@@ -1,20 +1,28 @@
 import * as React from "react"
-import * as ReactDOM from "react-dom"
+import { createRoot } from "react-dom/client"
 import { Provider } from "react-redux"
 import thunkMiddleware from "redux-thunk"
-import { createStore, applyMiddleware } from "redux"
-import { hot } from "react-hot-loader"
+import { createStore, applyMiddleware, compose } from "redux"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from "./Containers/Home"
+import Recipe from "./Containers/Recipe"
 import reducers from "./reducers"
 
-const store = createStore(reducers, applyMiddleware(thunkMiddleware))
-
-const WrappedHome = () => (
-  <Provider store={store}>
-    <Home />
-  </Provider>
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const store = createStore(
+  reducers,
+  composeEnhancers(applyMiddleware(thunkMiddleware))
 )
 
-const HotHome = hot(module)(WrappedHome)
-
-ReactDOM.render(<HotHome />, document.getElementById("home"))
+const container = document.getElementById("home")
+const root = createRoot(container)
+root.render(
+  <Provider store={store}>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/recipe/:id" element={<Recipe />} />
+      </Routes>
+    </Router>
+  </Provider>
+)
