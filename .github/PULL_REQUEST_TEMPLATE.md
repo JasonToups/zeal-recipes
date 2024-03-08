@@ -6,13 +6,13 @@
 
 ## Develop & Deploy
 
-- [ ] test locally
-- [ ] Link the ticket to this PR
-- [ ] Get PR Approved
-- [ ] merge PR
-- [ ] switch branches back to development
-- [ ] fetch & rebase latest changes
-- [ ] test locally
+- [ ] **test** locally
+- [ ] **link** the ticket to this PR
+- [ ] get PR **approved**
+- [ ] **merge** PR to `development`
+- [ ] **switch** branches back to development
+- [ ] **fetch & rebase** latest changes
+- [ ] **test** locally
 
 ---
 
