@@ -13,8 +13,9 @@
 - [ ] **test** all of the features going into the release
 - [ ] **draft** the release notes
 - [ ] **link** the release ticket to this PR
+- [ ] get PR **approved**
 - [ ] **merge** PR
 - [ ] **switch** branches back to main
-- [ ] **pull** latest changes
+- [ ] **fetch & rebase** latest changes
 - [ ] **test** locally
 - [ ] **publish** the release
