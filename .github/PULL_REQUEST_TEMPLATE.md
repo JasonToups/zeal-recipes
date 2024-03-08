@@ -16,7 +16,7 @@
 
 ---
 
-If you are submitting a Release Pull request, please go the the `Preview` tab and select the sub-template:
+If you are submitting a **Release Pull request**, please go the the `Preview` tab and select the sub-template:
 
 - [Major Release Pull Request Template](?expand=1&template=MAJOR_RELEASE_PULL_REQUEST_TEMPLATE.md)
 - [Minor Release Pull Request Template](?expand=1&template=MINOR_RELEASE_PULL_REQUEST_TEMPLATE.md)
