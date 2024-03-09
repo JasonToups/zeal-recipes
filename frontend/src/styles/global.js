@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
   h1 {
     font-size: 2em;
     margin-bottom: 0.75em;
+    font-family: "Abril Fatface", serif;
   }
   h2 {
     font-size: 1.5em;

@@ -2,7 +2,8 @@ import styled from "styled-components"
 
 export const HomeWrapper = styled.div`
   width: 100vw;
-  height: 85vh;
+  min-height: 85vh;
+  height: 100%;
   display: flex;
   flex-flow: row;
   margin: 8px auto;
@@ -14,4 +15,5 @@ export const SearchWrapper = styled.section`
   height: 100%;
   display: flex;
   flex-flow: column;
+  margin: 8px;
 `
