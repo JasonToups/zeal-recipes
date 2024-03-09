@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
-import { HomeWrapper } from "./styles"
+import { HomeWrapper, SearchWrapper } from "./styles"
 import Input from "@material-ui/core/Input"
 import TextField from "@material-ui/core/TextField"
 import Autocomplete from "@material-ui/lab/Autocomplete"
@@ -15,6 +15,7 @@ import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
 import * as actions from "../../actions"
 import Recipe from "../Recipe"
+import { RecipeWrapper } from "../Recipe/styles"
 import { ingredientList, recipeNames } from "./data"
 
 class Home extends Component {
@@ -67,51 +68,54 @@ class Home extends Component {
     const { recipe, isLoadingRecipe } = this.props
     return (
       <HomeWrapper>
-        <div>
-          <h3>Ingredients in Pantry</h3>
-          {ingredientList.map((ingredient) => (
-            <FormControlLabel
-              key={ingredient}
-              control={
-                <Checkbox
-                  checked={ingredients.includes(ingredient)}
-                  onChange={this.handleIngredient.bind(this, ingredient)}
-                  value={ingredient}
-                />
-              }
-              label={ingredient}
-            />
-          ))}
-        </div>
-        <Autocomplete
-          value={term}
-          onChange={this.handleTermChange}
-          inputValue={inputValue}
-          onInputChange={this.handleInputValueChange}
-          options={recipeNames}
-          getOptionLabel={(option) => option}
-          getOptionSelected={(option, value) => option === value}
-          renderInput={(params) => (
-            <TextField {...params} label="Recipe Names" variant="outlined" />
-          )}
-        />
-        <Button onClick={this.fetchSearch}>search</Button>
-        <Divider />
-        {recipes && (
-          <List>
-            {recipes.map((recipe) => (
-              <ListItem
-                key={recipe.id}
-                button
-                onClick={(event) => this.fetchRecipe(event, recipe.id)}
-              >
-                <ListItemText primary={recipe.name} />
-              </ListItem>
+        <SearchWrapper>
+          <div>
+            <h2>Ingredients in Pantry</h2>
+            {ingredientList.map((ingredient) => (
+              <FormControlLabel
+                key={ingredient}
+                control={
+                  <Checkbox
+                    checked={ingredients.includes(ingredient)}
+                    onChange={this.handleIngredient.bind(this, ingredient)}
+                    value={ingredient}
+                  />
+                }
+                label={ingredient}
+              />
             ))}
-          </List>
-        )}
-        {isLoading && <LinearProgress />}
-        <Divider />
+          </div>
+          <Autocomplete
+            value={term}
+            onChange={this.handleTermChange}
+            inputValue={inputValue}
+            onInputChange={this.handleInputValueChange}
+            options={recipeNames}
+            getOptionLabel={(option) => option}
+            getOptionSelected={(option, value) => option === value}
+            renderInput={(params) => (
+              <TextField {...params} label="Recipe Names" variant="outlined" />
+            )}
+          />
+          <Button onClick={this.fetchSearch}>search</Button>
+          <Divider />
+          {recipes && (
+            <List>
+              {recipes.map((recipe) => (
+                <ListItem
+                  key={recipe.id}
+                  button
+                  onClick={(event) => this.fetchRecipe(event, recipe.id)}
+                >
+                  <ListItemText primary={recipe.name} />
+                </ListItem>
+              ))}
+            </List>
+          )}
+          {isLoading && <LinearProgress />}
+          <Divider />
+        </SearchWrapper>
+
         {recipe && <Recipe />}
         {isLoadingRecipe && <LinearProgress />}
       </HomeWrapper>

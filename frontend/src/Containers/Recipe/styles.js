@@ -1,10 +1,11 @@
 import styled from "styled-components"
 
-export const RecipeWrapper = styled.div`
-  width: 75vw;
+export const RecipeWrapper = styled.section`
+  width: 100%;
   height: 90vh;
   display: flex;
   flex-flow: column;
   margin: auto;
-  padding: 8px;
+  margin: 8px;
+  overflow-wrap: break-word;
 `

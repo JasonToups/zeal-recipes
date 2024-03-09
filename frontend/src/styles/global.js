@@ -12,24 +12,31 @@ export const GlobalStyle = createGlobalStyle`
   }
   h1 {
     font-size: 2em;
+    margin-bottom: 0.5em;
   }
   h2 {
     font-size: 1.5em;
+    margin-bottom: 0.5em;
   }
   h3 {
     font-size: 1.17em;
+    margin-bottom: 0.5em;
   }
   h4 {
     font-size: 1em;
+    margin-bottom: 0.5em;
   }
   h5 {
     font-size: 0.83em;
+    margin-bottom: 0.5em;
   }
   h6 {
     font-size: 0.67em;
+    margin-bottom: 0.5em;
   }
   p {
     font-size: 1em;
+    margin-bottom: 0.5em;
   }
   a {
     text-decoration: none;
@@ -39,6 +46,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   button {
     cursor: pointer;
+    margin: 0.5em 0;
   }
   input {
     font-size: 1em;
