@@ -15,7 +15,7 @@ import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
 import * as actions from "../../actions"
 import Recipe from "../Recipe"
-import { RecipeWrapper } from "../Recipe/styles"
+import Instructions from "../Instructions"
 import { ingredientList, recipeNames } from "./data"
 
 class Home extends Component {
@@ -117,6 +117,7 @@ class Home extends Component {
         </SearchWrapper>
 
         {recipe && <Recipe />}
+        {!recipe && !isLoadingRecipe && <Instructions />}
         {isLoadingRecipe && <LinearProgress />}
       </HomeWrapper>
     )

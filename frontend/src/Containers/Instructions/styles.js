@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
-export const RecipeWrapper = styled.section`
+export const InstructionsWrapper = styled.section`
   width: 100%;
-  height: 85vh;
   display: flex;
   flex-flow: column;
-  margin: auto;
-  margin: 8px;
+  margin: 8px auto;
   overflow-wrap: break-word;
+  text-align: left;
+  justify-content: start;
 `

@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const HomeWrapper = styled.div`
   width: 100vw;
-  height: 90vh;
+  height: 85vh;
   display: flex;
   flex-flow: row;
   margin: 8px auto;
