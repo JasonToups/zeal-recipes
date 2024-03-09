@@ -1,10 +1,10 @@
 import styled from "styled-components"
 
-export const RecipeWrapper = styled.section`
+export const FooterWrapper = styled.section`
   width: 100%;
-  height: 100%;
-  min-height: 85vh;
   display: flex;
   flex-flow: column;
+  padding: 0 0 1em 0;
   overflow-wrap: break-word;
+  text-align: center;
 `
