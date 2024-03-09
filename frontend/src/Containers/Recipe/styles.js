@@ -5,7 +5,5 @@ export const RecipeWrapper = styled.section`
   height: 85vh;
   display: flex;
   flex-flow: column;
-  margin: auto;
-  margin: 8px;
   overflow-wrap: break-word;
 `

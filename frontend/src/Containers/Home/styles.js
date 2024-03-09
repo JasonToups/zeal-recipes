@@ -14,5 +14,4 @@ export const SearchWrapper = styled.section`
   height: 100%;
   display: flex;
   flex-flow: column;
-  margin: 8px;
 `
