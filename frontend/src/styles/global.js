@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
   }
-  #home {
+  #root {
     width: 100%;
     height: 100%;
 
