@@ -1,10 +1,9 @@
 import styled from "styled-components"
 
-export const RecipeWrapper = styled.article`
+export const SearchWrapper = styled.section`
   width: 100%;
   height: 100%;
-  min-height: 85vh;
+  min-width: 250px;
   display: flex;
   flex-flow: column;
-  overflow-wrap: break-word;
 `
