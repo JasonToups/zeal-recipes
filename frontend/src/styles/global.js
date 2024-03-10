@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import { colors } from "./colors"
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -19,10 +20,12 @@ export const GlobalStyle = createGlobalStyle`
     flex-direction: column;
     min-height: 100vh;
     min-height: 100svh;
+    background-color: ${colors.background};
+    color: ${colors.text};
   }
+  
   section, article {
     padding: 1.25rem 1rem 1.5rem;
-    background-color: #f4f4f4;
   }
   h1 {
     font-size: 2em;
