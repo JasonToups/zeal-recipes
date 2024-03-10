@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100svh;
   }
   section {
-    margin: 1.25rem 1rem 1.5rem;
+    padding: 1.25rem 1rem 1.5rem;
     background-color: #f4f4f4;
   }
   h1 {
