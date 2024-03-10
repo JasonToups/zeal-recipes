@@ -9,7 +9,13 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: Arial, sans-serif;
-    padding: 1.5rem;
+    padding: 0;
+    margin: 0;
+  }
+  #home {
+    width: 100%;
+    height: 100%;
+
   }
   section {
     margin: 1.25rem 1rem 1.5rem;

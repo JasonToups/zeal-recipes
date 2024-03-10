@@ -1,9 +1,6 @@
 import styled from "styled-components"
 
 export const HomeWrapper = styled.div`
-  width: 100vw;
-  min-height: 85vh;
-  height: 100%;
   display: flex;
   flex-flow: row;
 `
