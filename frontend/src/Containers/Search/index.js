@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
-import { SearchWrapper } from "./styles"
+import { SearchWrapper, ListWrapper } from "./styles"
 import Input from "@material-ui/core/Input"
 import TextField from "@material-ui/core/TextField"
 import Autocomplete from "@material-ui/lab/Autocomplete"
@@ -97,17 +97,19 @@ class Search extends Component {
         <Button onClick={this.fetchSearch}>search</Button>
         <Divider />
         {recipes && (
-          <List>
-            {recipes.map((recipe) => (
-              <ListItem
-                key={recipe.id}
-                button
-                onClick={(event) => this.fetchRecipe(event, recipe.id)}
-              >
-                <ListItemText primary={recipe.name} />
-              </ListItem>
-            ))}
-          </List>
+          <ListWrapper>
+            <List>
+              {recipes.map((recipe) => (
+                <ListItem
+                  key={recipe.id}
+                  button
+                  onClick={(event) => this.fetchRecipe(event, recipe.id)}
+                >
+                  <ListItemText primary={recipe.name} />
+                </ListItem>
+              ))}
+            </List>
+          </ListWrapper>
         )}
         {isLoading && <LinearProgress />}
         <Divider />
