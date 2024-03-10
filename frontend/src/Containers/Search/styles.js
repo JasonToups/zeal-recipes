@@ -1,16 +1,9 @@
 import styled from "styled-components"
 
-export const HomeWrapper = styled.div`
-  display: flex;
-  flex-flow: row;
-  height: 100%;
-  flex-grow: 1;
-`
-
 export const SearchWrapper = styled.section`
-  width: 40%;
-  min-width: 250px;
+  width: 100%;
   height: 100%;
+  min-width: 250px;
   display: flex;
   flex-flow: column;
 `
