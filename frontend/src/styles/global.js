@@ -9,10 +9,11 @@ export const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: Arial, sans-serif;
-    padding: 1.5em;
+    padding: 1.5rem;
   }
   section {
-    margin: 10px 1em 1.5em;
+    margin: 1.25rem 1rem 1.5rem;
+    background-color: #f4f4f4;
   }
   h1 {
     font-size: 2em;

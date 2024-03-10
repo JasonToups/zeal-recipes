@@ -6,7 +6,6 @@ export const HomeWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-flow: row;
-  margin: 8px auto;
 `
 
 export const SearchWrapper = styled.section`
@@ -15,5 +14,4 @@ export const SearchWrapper = styled.section`
   height: 100%;
   display: flex;
   flex-flow: column;
-  margin: 8px;
 `
