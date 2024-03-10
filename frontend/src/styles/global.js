@@ -5,17 +5,20 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 16px;
   }
   body {
     font-family: Arial, sans-serif;
     padding: 0;
     margin: 0;
+    font-size: 16px;
   }
   #root {
     width: 100%;
     height: 100%;
-
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100svh;
   }
   section {
     margin: 1.25rem 1rem 1.5rem;
