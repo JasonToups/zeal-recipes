@@ -20,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     min-height: 100svh;
   }
-  section {
+  section, article {
     padding: 1.25rem 1rem 1.5rem;
     background-color: #f4f4f4;
   }

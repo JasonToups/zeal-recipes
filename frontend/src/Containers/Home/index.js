@@ -2,21 +2,11 @@ import React, { Component } from "react"
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
 import { HomeWrapper, SearchWrapper } from "./styles"
-import Input from "@material-ui/core/Input"
-import TextField from "@material-ui/core/TextField"
-import Autocomplete from "@material-ui/lab/Autocomplete"
-import Checkbox from "@material-ui/core/Checkbox"
-import FormControlLabel from "@material-ui/core/FormControlLabel"
-import Divider from "@material-ui/core/Divider"
-import Button from "@material-ui/core/Button"
 import LinearProgress from "@material-ui/core/LinearProgress"
-import List from "@material-ui/core/List"
-import ListItem from "@material-ui/core/ListItem"
-import ListItemText from "@material-ui/core/ListItemText"
 import * as actions from "../../actions"
+import Search from "../Search"
 import Recipe from "../Recipe"
 import Instructions from "../Instructions"
-import { ingredientList, recipeNames } from "./data"
 
 class Home extends Component {
   constructor(props) {
@@ -68,53 +58,7 @@ class Home extends Component {
     const { recipe, isLoadingRecipe } = this.props
     return (
       <HomeWrapper>
-        <SearchWrapper>
-          <div>
-            <h2>Ingredients in Pantry</h2>
-            {ingredientList.map((ingredient) => (
-              <FormControlLabel
-                key={ingredient}
-                control={
-                  <Checkbox
-                    checked={ingredients.includes(ingredient)}
-                    onChange={this.handleIngredient.bind(this, ingredient)}
-                    value={ingredient}
-                  />
-                }
-                label={ingredient}
-              />
-            ))}
-          </div>
-          <Autocomplete
-            value={term}
-            onChange={this.handleTermChange}
-            inputValue={inputValue}
-            onInputChange={this.handleInputValueChange}
-            options={recipeNames}
-            getOptionLabel={(option) => option}
-            getOptionSelected={(option, value) => option === value}
-            renderInput={(params) => (
-              <TextField {...params} label="Recipe Names" variant="outlined" />
-            )}
-          />
-          <Button onClick={this.fetchSearch}>search</Button>
-          <Divider />
-          {recipes && (
-            <List>
-              {recipes.map((recipe) => (
-                <ListItem
-                  key={recipe.id}
-                  button
-                  onClick={(event) => this.fetchRecipe(event, recipe.id)}
-                >
-                  <ListItemText primary={recipe.name} />
-                </ListItem>
-              ))}
-            </List>
-          )}
-          {isLoading && <LinearProgress />}
-          <Divider />
-        </SearchWrapper>
+        <Search />
 
         {recipe && <Recipe />}
         {!recipe && !isLoadingRecipe && <Instructions />}
