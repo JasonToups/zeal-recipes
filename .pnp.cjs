@@ -1248,7 +1248,7 @@ const RAW_RUNTIME_STATE =
     ],\
     [\
       "bson",\
-      "npm:1.1.6"\
+      "npm:4.0.4"\
     ],\
     [\
       "buffer",\
@@ -2469,6 +2469,10 @@ const RAW_RUNTIME_STATE =
     [\
       "lodash.merge",\
       "npm:4.6.2"\
+    ],\
+    [\
+      "long",\
+      "npm:4.0.0"\
     ],\
     [\
       "loose-envify",\
@@ -9933,6 +9937,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/parser", "virtual:92512464fbf4815f6bc9a2cf49746f15e459e97d13bcfb3c37cdf61d2578992421f19c55b3c6f24ec7d8c722225134212ea766641f1c038d30be1faad0eb344d#npm:6.14.0"],\
           ["babel-eslint", "virtual:394fe46ccea37a470537b05fead138c1003a2fd67acc4da4ee61d303b0c8f3720d6b97ddc753f287946747d143d3432ac85a1df0bc7e95bdb67100a63bc11007#npm:10.1.0"],\
           ["body-parser", "npm:1.20.2"],\
+          ["bson", "npm:4.0.4"],\
           ["esbuild", "npm:0.12.18"],\
           ["esbuild-register", "npm:2.6.0"],\
           ["eslint", "npm:8.52.0"],\
@@ -11594,6 +11599,15 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
+      ["npm:4.0.4", {\
+        "packageLocation": "./.yarn/cache/bson-npm-4.0.4-16fcfc6396-9746a542e7.zip/node_modules/bson/",\
+        "packageDependencies": [\
+          ["bson", "npm:4.0.4"],\
+          ["buffer", "npm:5.7.1"],\
+          ["long", "npm:4.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:5.5.1", {\
         "packageLocation": "./.yarn/cache/bson-npm-5.5.1-d8774a4337-4f72f0e686.zip/node_modules/bson/",\
         "packageDependencies": [\
@@ -11617,6 +11631,15 @@ const RAW_RUNTIME_STATE =
           ["base64-js", "npm:1.5.1"],\
           ["ieee754", "npm:1.2.1"],\
           ["isarray", "npm:1.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:5.7.1", {\
+        "packageLocation": "./.yarn/cache/buffer-npm-5.7.1-513ef8259e-997434d3c6.zip/node_modules/buffer/",\
+        "packageDependencies": [\
+          ["buffer", "npm:5.7.1"],\
+          ["base64-js", "npm:1.5.1"],\
+          ["ieee754", "npm:1.2.1"]\
         ],\
         "linkType": "HARD"\
       }],\
@@ -15811,6 +15834,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/lodash.merge-npm-4.6.2-77cb4416bf-d0ea2dd009.zip/node_modules/lodash.merge/",\
         "packageDependencies": [\
           ["lodash.merge", "npm:4.6.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["long", [\
+      ["npm:4.0.0", {\
+        "packageLocation": "./.yarn/cache/long-npm-4.0.0-ecd96a31ed-8296e2ba7b.zip/node_modules/long/",\
+        "packageDependencies": [\
+          ["long", "npm:4.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
