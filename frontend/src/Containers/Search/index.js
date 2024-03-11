@@ -112,7 +112,6 @@ class Search extends Component {
           </ListWrapper>
         )}
         {isLoading && <LinearProgress />}
-        <Divider />
       </SearchWrapper>
     )
   }
