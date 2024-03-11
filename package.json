@@ -35,7 +35,7 @@
     "babel-loader": "8.2.2",
     "babel-plugin-named-asset-import": "0.3.7",
     "babel-preset-react-app": "9.1.2",
-    "esbuild": "0.12.18",
+    "esbuild": "^0.20.1",
     "eslint": "8.52.0",
     "nodemon": "3.0.1",
     "prettier": "2.3.2",
