@@ -3708,7 +3708,7 @@ __metadata:
     express: "npm:4.18.2"
     lodash: "npm:4.17.15"
     lorem-ipsum: "npm:2.0.3"
-    mongodb-memory-server: "npm:9.1.5"
+    mongodb-memory-server: "npm:^9.1.7"
     mongoose: "npm:5.13.21"
     nodemon: "npm:3.0.1"
     typescript: "npm:4.9.5"
@@ -9273,9 +9273,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongodb-memory-server-core@npm:9.1.5":
-  version: 9.1.5
-  resolution: "mongodb-memory-server-core@npm:9.1.5"
+"mongodb-memory-server-core@npm:9.1.7":
+  version: 9.1.7
+  resolution: "mongodb-memory-server-core@npm:9.1.7"
   dependencies:
     async-mutex: "npm:^0.4.0"
     camelcase: "npm:^6.3.0"
@@ -9289,17 +9289,17 @@ __metadata:
     tar-stream: "npm:^3.0.0"
     tslib: "npm:^2.6.2"
     yauzl: "npm:^2.10.0"
-  checksum: c3f45d43c463f0d0ca7b1f5a8e5934603f3147726201718393eba993cdec2134fb2135eb127ac94b513cc404b64dee8f26994e9b2433c7c7dece97149c2f526d
+  checksum: 54f1a68748ab75b6a6efabf9c1076c3cbb764a066169d5ed8c7391864ac2a43e9dab9fbbfd5d269cf5ecde44f9313c5d76f086ae1224df044a31f23bdafbaab6
   languageName: node
   linkType: hard
 
-"mongodb-memory-server@npm:9.1.5":
-  version: 9.1.5
-  resolution: "mongodb-memory-server@npm:9.1.5"
+"mongodb-memory-server@npm:^9.1.7":
+  version: 9.1.7
+  resolution: "mongodb-memory-server@npm:9.1.7"
   dependencies:
-    mongodb-memory-server-core: "npm:9.1.5"
+    mongodb-memory-server-core: "npm:9.1.7"
     tslib: "npm:^2.6.2"
-  checksum: 583f043e739289f5f52fb3db1a9a459c796822c184236941fd83aa3b23803cf7458b1ab3472bc1970056954086d25698385e72fc4cd600ff64657cd1c076fbb9
+  checksum: 0ec66767c39e7d09f9e232a39ceef54be15f748ef1e6c7c046bb4debbef7f75b2f8cbaec544363dc2b49c4ee68f06d17208b47c78497f370b965a5dba7aef000
   languageName: node
   linkType: hard
 
