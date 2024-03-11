@@ -15,11 +15,13 @@ class Recipe extends React.Component {
         {recipe && (
           <div key={recipe.id}>
             <h3>{recipe.name}</h3>
-            {recipe.ingredients.map((ingredient, index) => (
-              <p key={ingredient.key || index}>
-                {ingredient.name} - {ingredient.amount} {ingredient.unit}
-              </p>
-            ))}
+            <ul>
+              {recipe.ingredients.map((ingredient, index) => (
+                <li key={ingredient.key || index}>
+                  {ingredient.name} - {ingredient.amount} {ingredient.unit}
+                </li>
+              ))}
+            </ul>
             <p>{recipe.instructions}</p>
           </div>
         )}

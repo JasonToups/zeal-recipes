@@ -1,18 +1,31 @@
 import { createGlobalStyle } from "styled-components"
+import { colors } from "./colors"
 
 export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-size: 16px;
   }
   body {
     font-family: Arial, sans-serif;
-    padding: 1.5em;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
   }
-  section {
-    margin: 10px 1em 1.5em;
+  #root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100svh;
+    background-color: ${colors.background};
+    color: ${colors.text};
+  }
+  
+  section, article {
+    padding: 1.25rem 1rem 1.5rem;
   }
   h1 {
     font-size: 2em;
@@ -48,7 +61,6 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
   ul {
-    list-style: none;
   }
   button {
     cursor: pointer;
