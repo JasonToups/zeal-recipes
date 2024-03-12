@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
-import { HomeWrapper, SearchWrapper } from "./styles"
+import { HomeWrapper } from "./styles"
 import LinearProgress from "@material-ui/core/LinearProgress"
 import * as actions from "../../actions"
 import Search from "../Search"
