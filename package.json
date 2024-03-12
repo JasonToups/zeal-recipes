@@ -43,7 +43,8 @@
     "typescript": "4.9.5"
   },
   "engines": {
-    "node": "20.x"
+    "node": "20.x",
+    "yarn": "4.x"
   },
   "dependenciesMeta": {
     "html-pdf@3.0.1": {
