@@ -33,27 +33,27 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Abril Fatface", serif;
   }
   h2 {
-    font-size: 1.5em;
+    font-size: 1.75em;
     margin-bottom: 0.75em;
   }
   h3 {
-    font-size: 1.17em;
+    font-size: 1.5em;
     margin-bottom: 0.75em;
   }
   h4 {
-    font-size: 1em;
+    font-size: 1.25em;
     margin-bottom: 0.75em;
   }
   h5 {
-    font-size: 0.83em;
+    font-size: 1.15em;
     margin-bottom: 0.75em;
   }
   h6 {
-    font-size: 0.67em;
+    font-size: 1em;
     margin-bottom: 0.75em;
   }
   p {
-    font-size: 1em;
+    font-size: 1.25em;
     margin-bottom: 0.75em;
     line-height: 2em;
   }
@@ -61,6 +61,10 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
   ul {
+    margin-bottom: 0.75em;
+  }
+  li {
+    font-size: 1.25em;
   }
   button {
     cursor: pointer;

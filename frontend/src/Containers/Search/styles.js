@@ -10,6 +10,14 @@ export const SearchWrapper = styled.section`
   // background-image: linear-gradient(${colors.background}, ${colors.accent});
 `
 
+export const IngredientsWrapper = styled.div`
+  margin-bottom: 1rem;
+`
+
+export const InputWrapper = styled.div`
+  margin-bottom: 1.25rem;
+`
+
 export const ListWrapper = styled.div`
   background-color: ${colors.white};
   display: flex;
