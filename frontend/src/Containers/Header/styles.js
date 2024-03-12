@@ -10,4 +10,8 @@ export const HeaderWrapper = styled.section`
     radial-gradient(30px, #000 98%, #0000) bottom/55.5px 60px;
   -webkit-mask: var(--mask);
   mask: var(--mask);
+
+  span {
+    color: ${colors.primary};
+  }
 `
