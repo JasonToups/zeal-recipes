@@ -1,7 +1,12 @@
 import React, { Component } from "react"
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
-import { SearchWrapper, ListWrapper } from "./styles"
+import {
+  SearchWrapper,
+  IngredientsWrapper,
+  InputWrapper,
+  ListWrapper,
+} from "./styles"
 import Input from "@material-ui/core/Input"
 import TextField from "@material-ui/core/TextField"
 import Autocomplete from "@material-ui/lab/Autocomplete"
@@ -68,32 +73,36 @@ class Search extends Component {
       <SearchWrapper>
         <div>
           <h2>Ingredients in Pantry</h2>
-          {ingredientList.map((ingredient) => (
-            <FormControlLabel
-              key={ingredient}
-              control={
-                <Checkbox
-                  checked={ingredients.includes(ingredient)}
-                  onChange={this.handleIngredient.bind(this, ingredient)}
-                  value={ingredient}
-                />
-              }
-              label={ingredient}
-            />
-          ))}
+          <IngredientsWrapper>
+            {ingredientList.map((ingredient) => (
+              <FormControlLabel
+                key={ingredient}
+                control={
+                  <Checkbox
+                    checked={ingredients.includes(ingredient)}
+                    onChange={this.handleIngredient.bind(this, ingredient)}
+                    value={ingredient}
+                  />
+                }
+                label={ingredient}
+              />
+            ))}
+          </IngredientsWrapper>
         </div>
-        <Autocomplete
-          value={term}
-          onChange={this.handleTermChange}
-          inputValue={inputValue}
-          onInputChange={this.handleInputValueChange}
-          options={recipeNames}
-          getOptionLabel={(option) => option}
-          getOptionSelected={(option, value) => option === value}
-          renderInput={(params) => (
-            <TextField {...params} label="Recipe Names" variant="outlined" />
-          )}
-        />
+        <InputWrapper>
+          <Autocomplete
+            value={term}
+            onChange={this.handleTermChange}
+            inputValue={inputValue}
+            onInputChange={this.handleInputValueChange}
+            options={recipeNames}
+            getOptionLabel={(option) => option}
+            getOptionSelected={(option, value) => option === value}
+            renderInput={(params) => (
+              <TextField {...params} label="Recipe Names" variant="outlined" />
+            )}
+          />
+        </InputWrapper>
         <Button onClick={this.fetchSearch}>search</Button>
         <Divider />
         {recipes && (

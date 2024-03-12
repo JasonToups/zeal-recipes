@@ -6,7 +6,9 @@ class Header extends React.Component {
   render() {
     return (
       <HeaderWrapper>
-        <h1>The Joy of Recipes</h1>
+        <h1>
+          The <span>Joy</span> of Recipes
+        </h1>
       </HeaderWrapper>
     )
   }
